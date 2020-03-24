@@ -1,0 +1,49 @@
+{
+  "name": "m2i",
+  "version": "0.1.0",
+  "description": "A markdown to image parser",
+  "keywords": [
+    "m2i",
+    "cli",
+    "zce"
+  ],
+  "homepage": "https://github.com/zce/m2i#readme",
+  "bugs": {
+    "url": "https://github.com/zce/m2i/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "zce",
+    "email": "w@zce.me",
+    "url": "https://zce.me"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "bin": {
+    "m2i": "bin/m2i.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zce/m2i.git"
+  },
+  "scripts": {
+    "lint": "standard --fix",
+    "test": "node ./bin/m2i.js README.md"
+  },
+  "dependencies": {
+    "commander": "^5.0.0",
+    "cosmiconfig": "^6.0.0",
+    "gray-matter": "^4.0.2",
+    "marked": "^0.8.2",
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {
+    "standard": "^14.3.3"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}
