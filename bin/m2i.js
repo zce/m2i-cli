@@ -8,7 +8,7 @@ program
   .version(pkg.version)
   .usage('<input>')
   .option('-o, --output <output>', 'output filename')
-  .option('-w, --width <width>', 'image width')
+  .option('-w, --width <width>', 'output image width')
   .on('--help', () => {
     console.log()
     console.log('Example:')

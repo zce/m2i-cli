@@ -8,18 +8,18 @@
 [![devDependency Status][devdependency-image]][devdependency-url]
 [![Code Style][style-image]][style-url]
 
-> A markdown to image parser
+> A minimalist markdown to image converter
 
 ## Installation
 
 ```shell
-$ yarn add m2i
-
-# or npm
 $ npm install m2i
+
+# or yarn
+$ yarn add m2i
 ```
 
-> People in China can use `npm.taobao.org` to increase installation speed.
+> People in China can use `npm.taobao.org` mirror to increase installation speed.
 
 .npmrc
 
@@ -67,7 +67,7 @@ await m2i('./README.md', {
 
 ##### width
 
-- Type: `string`
+- Type: `number`
 - Details: output image width
 - Default: 800
 
@@ -87,7 +87,7 @@ Usage: m2i <input>
 Options:
   -V, --version          output the version number
   -o, --output <output>  output filename
-  -w, --width <width>    image width
+  -w, --width <width>    output image width
   -h, --help             display help for command
 
 Example:
@@ -124,6 +124,21 @@ html: |
 
 This configuration file is loaded through [cosmoconfig](https://github.com/davidtheclark/cosmiconfig#explorersearch), so you can place the corresponding file according to its rules, such as `~/.m2irc`.
 
+## Recipes
+
+### Code highlighting
+
+Code highlighting through [Prism](https://prismjs.com).
+
+.m2irc
+
+```yaml
+html: |
+  <link rel="stylesheet" href="https://unpkg.com/github-markdown-css">
+  <link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-okaidia.css">
+  <article class="markdown-body" style="padding: 2.5em">${content.trim()}</article>
+  <script src="https://unpkg.com/prismjs"></script>
+```
 
 ## Contributing
 

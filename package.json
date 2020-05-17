@@ -1,7 +1,7 @@
 {
   "name": "m2i",
   "version": "0.1.0",
-  "description": "A markdown to image parser",
+  "description": "A minimalist markdown to image converter",
   "keywords": [
     "m2i",
     "cli",
