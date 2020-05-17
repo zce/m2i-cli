@@ -34,7 +34,8 @@
   },
   "scripts": {
     "lint": "standard --fix",
-    "test": "node ./bin/m2i.js README.md"
+    "test": "node ./bin/m2i.js README.md",
+    "ship": "npm publish --registry https://registry.npmjs.org"
   },
   "dependencies": {
     "commander": "^5.1.0",
