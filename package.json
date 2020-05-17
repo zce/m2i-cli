@@ -37,7 +37,7 @@
     "commander": "^5.0.0",
     "cosmiconfig": "^6.0.0",
     "gray-matter": "^4.0.2",
-    "marked": "^0.8.2",
+    "marked": "^1.0.0",
     "puppeteer": "^2.1.1"
   },
   "devDependencies": {
