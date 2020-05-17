@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const path = require('path')
 const program = require('commander')
 const pkg = require('../package')
 const m2i = require('..')
@@ -20,8 +21,16 @@ program
 const { args, output, width } = program
 const [input] = args
 
-m2i(input, { output, width }).catch(e => {
-  console.error(e)
-  // error exit
+const main = async () => {
+  const start = new Date()
+  const img = await m2i(input, { output, width })
+  const end = new Date()
+  console.log(
+    `Image generated → ${path.relative(process.cwd(), img)} (${end - start}ms)`
+  )
+}
+
+main().catch(e => {
+  console.error(e.message)
   process.exit(1)
 })

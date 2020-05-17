@@ -39,14 +39,14 @@ $ PUPPETEER_DOWNLOAD_HOST=https://npm.taobao.org/mirrors npm i m2i
 ```javascript
 const m2i = require('m2i')
 
-await m2i('./README.md')
-// README.md => README.png
+await m2i('./readme.md')
+// readme.md => readme.png
 
-await m2i('./README.md', { 
+await m2i('./readme.md', { 
   output: './foo.png', 
   width: 1280 
 })
-// README.md => foo.png
+// readme.md => foo.png
 ```
 
 ## API
@@ -64,12 +64,13 @@ await m2i('./README.md', {
 
 - Type: `string`
 - Details: output image path
+- Default: `'<input>.png'`
 
 ##### width
 
 - Type: `number`
 - Details: output image width
-- Default: 800
+- Default: `800`
 
 ## CLI Usage
 

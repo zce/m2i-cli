@@ -4,6 +4,9 @@
   "description": "A minimalist markdown to image converter",
   "keywords": [
     "m2i",
+    "markdown",
+    "image",
+    "converter",
     "cli",
     "zce"
   ],
@@ -34,14 +37,15 @@
     "test": "node ./bin/m2i.js README.md"
   },
   "dependencies": {
-    "commander": "^5.0.0",
+    "commander": "^5.1.0",
     "cosmiconfig": "^6.0.0",
     "gray-matter": "^4.0.2",
-    "marked": "^0.8.2",
-    "puppeteer": "^2.1.1"
+    "marked": "^1.1.0",
+    "puppeteer": "^3.0.4",
+    "replace-ext": "^2.0.0"
   },
   "devDependencies": {
-    "standard": "^14.3.3"
+    "standard": "^14.3.4"
   },
   "engines": {
     "node": ">=10"
