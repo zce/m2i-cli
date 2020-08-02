@@ -38,7 +38,7 @@
     "ship": "npm publish --registry https://registry.npmjs.org"
   },
   "dependencies": {
-    "commander": "^5.1.0",
+    "commander": "^6.0.0",
     "cosmiconfig": "^7.0.0",
     "gray-matter": "^4.0.2",
     "marked": "^1.1.0",
