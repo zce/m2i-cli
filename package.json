@@ -42,7 +42,7 @@
     "cosmiconfig": "^7.0.0",
     "gray-matter": "^4.0.2",
     "marked": "^1.1.0",
-    "puppeteer": "^4.0.0",
+    "puppeteer": "^7.0.0",
     "replace-ext": "^2.0.0"
   },
   "devDependencies": {
