@@ -1,7 +1,14 @@
 # Changelog
 
+## [0.2.0] - 2021-02-05
+
+- Refactor with TypeScript
+
 ## [0.1.0] - 2020-03-23
 
 - Initial release
 
 <!-- http://keepachangelog.com/ -->
+
+[0.2.0]: https://github.com/zce/m2i/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/zce/m2i/releases/tag/v0.1.0
