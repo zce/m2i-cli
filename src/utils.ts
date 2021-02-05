@@ -48,7 +48,7 @@ export const placeholder = '{{placeholder}}'
  */
 export const getConfig = async (): Promise<Config> => {
   const explorer = cosmiconfig(name)
-  const { config } = await explorer.search(process.cwd()) || {}
+  const { config } = await explorer.search(process.cwd()) ?? {}
 
   const defaults: Config = {
     markdown: placeholder,
