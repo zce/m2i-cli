@@ -42,6 +42,7 @@ export default async (input: string, options: Options = {}): Promise<string> => 
   // capture screenshot
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
+  page.setDefaultNavigationTimeout(0)
   await page.setViewport({ width, height: 80, deviceScaleFactor })
   await page.setContent(result)
   await page.screenshot({ path: output, fullPage: true })

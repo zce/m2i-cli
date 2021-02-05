@@ -42,7 +42,9 @@ cli
       .then(result => spinner.succeed(
         `Image generated → ${relative(process.cwd(), result)} (${((Date.now() - start) / 1000).toFixed(2)}s)`
       ))
-      .catch(console.error)
+      .catch(err => {
+        spinner.fail(err.message)
+      })
   })
 
 cli.help().version(version).parse()
