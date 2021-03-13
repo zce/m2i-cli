@@ -52,7 +52,7 @@ export const getConfig = async (): Promise<Config> => {
 
   const defaults: Config = {
     markdown: placeholder,
-    html: `<link rel="stylesheet" href="https://unpkg.com/github-markdown-css"><div class="markdown-body" style="padding: 2.5em">${placeholder}</div>`
+    html: `<link rel="stylesheet" href="https://cdn.zce.me/markdown.css">${placeholder}`
   }
 
   return { ...defaults, ...config }
