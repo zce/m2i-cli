@@ -163,8 +163,7 @@ html: |
   <script src="https://unpkg.com/prismjs"></script>
 ```
 
-### Custom CSS
-
+### Custom styles
 
 .m2irc
 
@@ -173,15 +172,10 @@ html: |
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
   <style>
     :root {
-      --font-sans: system-ui, 'Noto Sans SC', sans-serif;
-      --font-serif: Georgia, 'Noto Serif SC', serif;
-      --font-mono: 'Fira Code', monospace;
+      --font-sans: 'Noto Sans SC', sans-serif;
       --body-width: 45em;
       --body-bg: #f3f2ee;
       --body-color: #1f0909;
-      --border: #c9cbc6;
-      --block-bg: #edece8;
-      --link-color: #228be6;
     }
     body {
       margin: 0 auto;
@@ -189,116 +183,7 @@ html: |
       max-width: var(--body-width);
       background: var(--body-bg);
       color: var(--body-color);
-      font-size: 16px;
-      line-height: 1.75;
-      font-weight: 400;
       font-family: var(--font-sans);
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      line-height: 1.2;
-    }
-    h1 {
-      margin-top: .67em;
-      margin-bottom: .67em;
-      padding-bottom: .5em;
-      border-bottom: 1px solid var(--border);
-      font-size: 2.5em;
-      font-weight: bold;
-    }
-    h2 {
-      margin-top: .83em;
-      margin-bottom: .83em;
-      font-size: 2em;
-      font-weight: bold;
-    }
-    h3 {
-      margin-top: 1em;
-      margin-bottom: 1em;
-      font-size: 1.75em;
-      font-weight: bold;
-    }
-    h4 {
-      margin-top: 1.33em;
-      margin-bottom: 1.33em;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-    h5 {
-      margin-top: 1.67em;
-      margin-bottom: 1.67em;
-      font-size: 1.25em;
-      font-weight: bold;
-    }
-    h6 {
-      margin-top: 2.33em;
-      margin-bottom: 2.33em;
-      font-size: 1em;
-      font-weight: bold;
-    }
-    hr {
-      border: 0;
-      height: 1px;
-      background: var(--border);
-    }
-    ul, ol {
-      position: relative;
-      padding-left: 2.5em;
-    }
-    li ol > li {
-      list-style-type: lower-alpha;
-    }
-    li li ol > li {
-      list-style-type: lower-roman;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      overflow: auto;
-      width: 100%;
-    }
-    thead {
-      background: var(--border);
-      text-align: left;
-    }
-    tr:nth-of-type(2n) {
-      background: var(--block-bg);
-    }
-    th, td {
-      padding: .25em .5em;
-    }
-    blockquote {
-      margin: 0;
-      padding: 1em 1.25em;
-      border-left: 5px solid var(--border);
-      background: var(--block-bg);
-    }
-    blockquote > :last-child {
-      margin-bottom: 0;
-    }
-    blockquote > :first-child {
-      margin-top: 0;
-    }
-    blockquote ul, blockquote ol {
-      padding-left: 1.5em;
-    }
-    pre {
-      padding: 0;
-      background: var(--block-bg);
-    }
-    code {
-      font-size: 87.5%;
-      font-family: var(--font-mono);
-    }
-    pre code {
-      display: block;
-      padding: 1em 1.25em;
-      overflow: auto;
-    }
-    img {
-      max-width: 100%;
     }
     a {
       color: var(--link-color);
