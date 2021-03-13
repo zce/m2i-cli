@@ -15,12 +15,13 @@ test('m2i', async () => {
 
 test('m2i:options', async () => {
   const output = await m2i(path.join(__dirname, 'fixtures.md'), {
-    output: path.join(__dirname, 'output.png'),
+    output: path.join(__dirname, 'output.pdf'),
     width: 100,
-    scale: 1
+    scale: 1,
+    pdf: true
   })
 
-  expect(output).toBe(path.join(__dirname, 'output.png'))
+  expect(output).toBe(path.join(__dirname, 'output.pdf'))
 
   const stat = await fs.stat(output)
 
