@@ -7,11 +7,13 @@ export interface Options {
   output?: string
   width?: number
   scale?: number
+  pdf?: boolean
 }
 
 export default async (input: string, options: Options = {}): Promise<string> => {
   const filename = path.resolve(input)
-  const output = path.resolve(options.output ?? input.replace(/\.\S+$/, '.png'))
+  const isPdf = options.pdf ?? false
+  const output = path.resolve(options.output ?? input.replace(/\.\S+$/, isPdf ? '.pdf' : '.png'))
   const width = options.width ?? 600
   const deviceScaleFactor = options.scale ?? 2
 
@@ -45,7 +47,11 @@ export default async (input: string, options: Options = {}): Promise<string> => 
   page.setDefaultNavigationTimeout(0)
   await page.setViewport({ width, height: 200, deviceScaleFactor })
   await page.setContent(result)
-  await page.screenshot({ path: output, fullPage: true })
+  if (isPdf) {
+    await page.pdf({ path: output.replace(/\.png$/, '.pdf'), printBackground: true, preferCSSPageSize: true })
+  } else {
+    await page.screenshot({ path: output, fullPage: true })
+  }
   await browser.close()
 
   return output

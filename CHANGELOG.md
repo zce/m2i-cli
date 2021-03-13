@@ -3,6 +3,7 @@
 ## [0.4.0] - 2021-03-12
 
 - Upgrade puppeteer v8
+- Support pdf output
 
 ## [0.3.0] - 2021-02-05
 

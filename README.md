@@ -99,7 +99,7 @@ $ yarn global add m2i
 
 ```shell
 $ m2i --help
-m2i/0.1.0
+m2i/0.4.0
 
 Usage:
   $ m2i <input>
@@ -114,11 +114,13 @@ Options:
   -o, --output <output>  Output filename
   -w, --width <width>    Output image width
   -s, --scale <scale>    Device scale factor
+  -p, --pdf              Output pdf
   -h, --help             Display this message
   -v, --version          Display version number
 
 Examples:
   $ m2i example.md -o output.png -w 500
+  $ m2i example.md -o output.pdf -p
 ```
 
 ## Advanced Usage

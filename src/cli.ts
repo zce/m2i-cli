@@ -23,8 +23,10 @@ cli
   .option('-o, --output <output>', 'Output filename')
   .option('-w, --width <width>', 'Output image width')
   .option('-s, --scale <scale>', 'Device scale factor')
+  .option('-p, --pdf', 'Output pdf')
   .example(`  $ ${name as string} example.md -o output.png -w 500`)
-  .action((input, { output, width, scale }) => {
+  .example(`  $ ${name as string} example.md -o output.pdf -p`)
+  .action((input, { output, width, scale, pdf }) => {
     if (typeof output !== 'string' && typeof output !== 'undefined') {
       throw new TypeError(`Expected output is a string, got ${typeof output}`)
     }
@@ -35,12 +37,13 @@ cli
       throw new TypeError(`Expected scale is a number, got ${typeof scale}`)
     }
 
+    const format = pdf !== true ? 'Image' : 'PDF'
     const start = Date.now()
-    const spinner = ora('Image generating...').start()
+    const spinner = ora(format + ' generating...').start()
 
-    m2i(input, { output, width, scale })
+    m2i(input, { output, width, scale, pdf })
       .then(result => spinner.succeed(
-        `Image generated → ${relative(process.cwd(), result)} (${((Date.now() - start) / 1000).toFixed(2)}s)`
+        `${format} generated → ${relative(process.cwd(), result)} (${((Date.now() - start) / 1000).toFixed(2)}s)`
       ))
       .catch(err => {
         spinner.fail(err.message)
