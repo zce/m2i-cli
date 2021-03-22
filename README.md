@@ -1,6 +1,6 @@
 # m2i
 
-[![Build Status][travis-img]][travis-url]
+[![Build Status][actions-img]][actions-url]
 [![Coverage Status][codecov-img]][codecov-url]
 [![License][license-img]][license-url]
 [![NPM Downloads][downloads-img]][downloads-url]
@@ -9,7 +9,7 @@
 [![devDependency Status][devdependency-img]][devdependency-url]
 [![Code Style][style-img]][style-url]
 
-> A minimalist markdown to image converter, built with puppeteer.
+> A minimalist markdown to image converter, built with [puppeteer](https://pptr.dev).
 
 ## Installation
 
@@ -216,8 +216,8 @@ html: |
 
 
 
-[travis-img]: https://img.shields.io/travis/com/zce/m2i
-[travis-url]: https://travis-ci.com/zce/m2i
+[actions-img]: https://img.shields.io/github/workflow/status/zce/m2i/CI
+[actions-url]: https://github.com/zce/m2i/actions
 [codecov-img]: https://img.shields.io/codecov/c/github/zce/m2i
 [codecov-url]: https://codecov.io/gh/zce/m2i
 [license-img]: https://img.shields.io/github/license/zce/m2i
