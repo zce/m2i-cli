@@ -1,7 +1,8 @@
 import path from 'path'
 import marked from 'marked'
-import puppeteer from 'puppeteer'
+import puppeteer from 'puppeteer-core'
 import { exists, read, placeholder, getConfig } from './utils'
+
 
 export interface Options {
   output?: string
@@ -42,7 +43,7 @@ export default async (input: string, options: Options = {}): Promise<string> => 
   const result = config.html.replace(placeholder, rendered)
 
   // capture screenshot
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ executablePath: config.chromium })
   const page = await browser.newPage()
   page.setDefaultNavigationTimeout(0)
   await page.setViewport({ width, height: 200, deviceScaleFactor })

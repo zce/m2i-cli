@@ -20,67 +20,6 @@ $ npm install m2i
 $ yarn add m2i
 ```
 
-> People in China can use `npm.taobao.org` mirror to increase installation speed.
->
-> .npmrc
->
-> ```ini
-> # other configs
-> puppeteer_download_host = https://npm.taobao.org/mirrors
-> ```
->
-> or env
->
-> ```shell
-> $ PUPPETEER_DOWNLOAD_HOST=https://npm.taobao.org/mirrors npm i m2i
-> ```
-
-## Usage
-
-```javascript
-const m2i = require('m2i')
-
-// readme.md => readme.png
-const result = await m2i('./readme.md')
-// result => 'readme.png'
-
-// more options
-await m2i('./readme.md', {
-  output: './foo.png', // output filename
-  width: 800, // viewport width
-  scale: 1 // device scale factor
-})
-```
-
-## API
-
-### m2i(input, options?)
-
-#### input
-
-- Type: `string`
-- Details: markdown file path
-
-#### options
-
-##### output
-
-- Type: `string`
-- Details: output image path
-- Default: `'<input_basename>.png'`
-
-##### width
-
-- Type: `number`
-- Details: output image width, viewport width
-- Default: `600`
-
-##### scale
-
-- Type: `number`
-- Details: output image scale, device scale factor
-- Default: `2`
-
 ## CLI Usage
 
 Use npx:
@@ -123,21 +62,33 @@ Examples:
   $ m2i example.md -o output.pdf -p
 ```
 
+m2i will automatically find the chrome or edge installed on your computer.
+
+You can also use `CHROMIUM_PATH` provides an executable chromium file path:
+
+```shell
+$ CHROMIUM_PATH="/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge" npx m2i README.md
+```
+
 ## Advanced Usage
 
 By default, the conversion process of markdown does not do extra things. If you want to change the output format, you can customize the template of markdown or HTML in the configuration file.
 
 This is good for customizing some shared content, or import custom style file.
 
-.m2irc example:
+`.m2irc` example:
 
 ```yaml
+# custom chromium executable path
+chromium: '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'
+# custom common shared content
 markdown: |
   {{placeholder}}
 
   ## License
 
   Licensed under the MIT License.
+# custom render html template
 html: |
   <link rel="stylesheet" href="https://unpkg.com/github-markdown-css">
   <article class="markdown-body" style="padding: 2.5em">
@@ -194,6 +145,58 @@ html: |
   </style>
   <div>{{placeholder}}</div>
 ```
+
+## API Usage
+
+```javascript
+const m2i = require('m2i')
+
+// readme.md => readme.png
+const result = await m2i('./readme.md')
+// result => 'readme.png'
+
+// more options
+await m2i('./readme.md', {
+  output: './foo.png', // output filename
+  width: 800, // viewport width
+  scale: 1 // device scale factor
+})
+```
+
+## References
+
+### m2i(input, options?)
+
+#### input
+
+- Type: `string`
+- Details: markdown file path
+
+#### options
+
+##### output
+
+- Type: `string`
+- Details: output image path
+- Default: `'<input_basename>.png'`
+
+##### width
+
+- Type: `number`
+- Details: output image width, viewport width
+- Default: `600`
+
+##### scale
+
+- Type: `number`
+- Details: output image scale, device scale factor
+- Default: `2`
+
+##### pdf
+
+- Type: `boolean`
+- Details: pdf mode, output pdf file
+- Default: `false`
 
 ## Related
 
