@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.0] - 2021-03-23
+
+- Using puppeteer-core
+
 ## [0.4.0] - 2021-03-12
 
 - Upgrade puppeteer v8
@@ -15,6 +19,7 @@
 
 <!-- http://keepachangelog.com/ -->
 
+[0.5.0]: https://github.com/zce/m2i/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/zce/m2i/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/zce/m2i/compare/v0.1.0...v0.3.0
 [0.1.0]: https://github.com/zce/m2i/releases/tag/v0.1.0
