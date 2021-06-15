@@ -28,7 +28,7 @@
     "cosmiconfig": "^7.0.0",
     "marked": "^2.0.1",
     "ora": "^5.4.0",
-    "puppeteer-core": "^8.0.0"
+    "puppeteer-core": "^10.0.0"
   },
   "devDependencies": {
     "@types/jest": "26.0.21",
