@@ -3,7 +3,6 @@ import marked from 'marked'
 import puppeteer from 'puppeteer-core'
 import { exists, read, placeholder, getConfig } from './utils'
 
-
 export interface Options {
   output?: string
   width?: number
