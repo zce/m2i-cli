@@ -26,13 +26,13 @@
   "dependencies": {
     "cac": "^6.7.3",
     "cosmiconfig": "^7.0.0",
-    "marked": "^2.1.3",
+    "marked": "^3.0.0",
     "ora": "^5.4.1",
     "puppeteer-core": "^10.1.0"
   },
   "devDependencies": {
     "@types/jest": "26.0.24",
-    "@types/marked": "2.0.4",
+    "@types/marked": "3.0.1",
     "@types/node": "16.0.0",
     "jest": "27.0.6",
     "rimraf": "3.0.2",
